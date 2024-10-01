@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Types de Bonbons{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Liste des Types de Bonbons</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Désignation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for type in typesBonbon %}
+                <tr>
+                    <td>{{ type.id }}</td>
+                    <td>{{ type.designation }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

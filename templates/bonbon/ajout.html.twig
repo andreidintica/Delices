@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un Bonbon{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Ajouter un Bonbon</h1>
+        <form>
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom du bonbon</label>
+                <input type="text" class="form-control" id="nom" required>
+            </div>
+            <div class="mb-3">
+                <label for="prix" class="form-label">Prix</label>
+                <input type="number" class="form-control" id="prix" required>
+            </div>
+            <div class="mb-3">
+                <label for="gout" class="form-label">Goût</label>
+                <input type="text" class="form-control" id="gout" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+{% endblock %}
